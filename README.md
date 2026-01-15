@@ -1,5 +1,5 @@
 # retodocker
-# 🌐 Implementación de la Web Corporativa: WordPress + Docker
+# WordPress + Docker
 
 ## 1. Introducción
 Como parte de mi contribución al **Reto 2**, voy a usar wordpress.
