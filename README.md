@@ -16,3 +16,16 @@ Para garantizar la portabilidad y la eficiencia en el despliegue, la web corpora
 * **Base de Datos:** MariaDB
 * **Despliegue:** Docker Compose
 * **Persistencia:** Volúmenes de Docker para asegurar que los cambios no se vayan.
+
+## 4. Reflexión Final
+
+**¿Facilita Docker el desarrollo del proyecto del campus?** Sí, permite levantar Moodle y WordPress.
+
+**¿Te ayuda Git/GitHub a organizar tu trabajo, aunque sea individual?** Sí me permite guardar cada avance.
+
+**¿Qué ventajas aportan estas herramientas?** Aportan rapidez y orden.
+
+**¿Qué problemas o dificultades has encontrado al usarlas?** La mayor dificultad ha sido configurar correctamente los volúmenes.
+
+**¿Crees que estas herramientas mejorarían el trabajo en equipo en el reto completo?** 
+mas de uno pueden trabajar a la vez a si que esta bien.
