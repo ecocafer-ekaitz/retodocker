@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  db_wordpress:
+    image: mariadb:latest
+    container_name: campus-wp-db
+    restart: always
+    environment:
+      - MYSQL_DATABASE=wordpress_db
+      - MYSQL_USER=wp_user
+      - MYSQL_PASSWORD=wp_password
+      - MYSQL_ROOT_PASSWORD=root_password
+    volumes:
+      - wp_db_data:/var/lib/mysql
+    networks:
+      - campus-network
+
+  wordpress:
+    image: wordpress:latest
+    container_name: campus-wp-app
+    restart: always
+    ports:
+      - "8000:80"
+    environment:
+      - WORDPRESS_DB_HOST=db_wordpress
+      - WORDPRESS_DB_USER=wp_user
+      - WORDPRESS_DB_PASSWORD=wp_password
+      - WORDPRESS_DB_NAME=wordpress_db
+    volumes:
+      - wp_app_data:/var/www/html
+    depends_on:
+      - db_wordpress
+    networks:
+      - campus-network
+
+networks:
+  campus-network:
+    driver: bridge
+
+volumes:
+  wp_db_data:
+  wp_app_data:
